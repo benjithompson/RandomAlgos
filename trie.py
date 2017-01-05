@@ -21,7 +21,7 @@ class Trie(object):
         node = self
         for letter in word:
             node = node.child[letter]
-            node.commonWords = node.commonWords+1
+            node.commonwords = node.commonwords+1
             #print('{0},{1}'.format(letter, node.commonWords))
         node = node.child[None]
 
@@ -47,5 +47,5 @@ for a0 in range(N):
 
     if op == 'find':
         count = trie.get_subwords(contact)
-        print count
+        print(count)
         
